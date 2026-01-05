@@ -87,7 +87,7 @@ const deleteComment = async (commentId: string, authorId: string) => {
 }
 
 // authorId, commentId, updatedData
-const updateComment = async (commentId:string, data:{content?:string, staus?:CommentStatus}, authorId: string) => {
+const updateComment = async (commentId:string, data:{content?:string, status?:CommentStatus}, authorId: string) => {
     // console.log({commentId, data, authorId});
     const commentData = await prisma.comment.findFirst({
     where: {
